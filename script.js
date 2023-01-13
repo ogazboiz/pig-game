@@ -40,6 +40,6 @@ btnHold.addEventListener('click', function () {
   totalScore[activePlayer] = totalScore[activePlayer] + score;
   document.getElementById(`score--${activePlayer}`).textContent =
     totalScore[activePlayer];
-
+  //switch player
   switchPlayer();
 });
