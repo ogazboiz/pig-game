@@ -40,6 +40,13 @@ btnHold.addEventListener('click', function () {
   totalScore[activePlayer] = totalScore[activePlayer] + score;
   document.getElementById(`score--${activePlayer}`).textContent =
     totalScore[activePlayer];
-  //switch player
-  switchPlayer();
+
+  if (totalScore[activePlayer] >= 20) {
+    const winner = document.querySelector(`.player--${activePlayer}`);
+    winner.classList.add('player--winner');
+    winner.classList.remove('player--active');
+  } else {
+    //switch player
+    switchPlayer();
+  }
 });
